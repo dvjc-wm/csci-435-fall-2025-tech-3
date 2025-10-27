@@ -5,8 +5,8 @@ This is a self-contained demo intended to showcase features of PyCharm.
 ## Expectations
 
 - less than 10 commits
-- less than 20 files
-- and some intentionally broken code that doesn't break running the app but that showcases how PyCharm can help you redress such things
+- not many files
+- and some intentionally broken code that doesn't break running the app ... which showcases how PyCharm can help you with such things
 
 ## Documentation
 
