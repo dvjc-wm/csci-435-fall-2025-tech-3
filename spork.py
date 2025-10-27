@@ -65,7 +65,7 @@ valid_command = fetch_valid_command()
 continue_loop = valid_command != "exit" and valid_command != "x"
 
 while continue_loop:
-    print('.... again ....')
+
     if valid_command == "cls":
         wipe_terminal()
         describe_current_location()
