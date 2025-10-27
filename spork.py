@@ -135,7 +135,7 @@ while continue_loop:
             print("There is nothing to take\n")
 
         else:
-            # auto-assign the first item in the location
+            # auo-assign the first item in the location
             if len(target_item)==0 and len(location_items_as_array)>0:
                 item_count = len(location_items_as_array)
                 while item_count > 0 and len(target_item)==0 :
