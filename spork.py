@@ -38,6 +38,7 @@ def describe_current_location():
 
 def fetch_valid_command():
     available_commands = ['n', 's', 'e', 'w', 'ne', 'se', 'nw', 'sw', 'u', 'd'
+                        , 'north', 'south', 'east', 'west', 'northeast', 'southeast', 'northwest', 'southwest'
                         , 'verbose', 'brief'
                         , 'i', 'inventory'
                         , 'x', 'exit', 'take'
