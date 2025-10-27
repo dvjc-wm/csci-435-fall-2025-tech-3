@@ -165,7 +165,7 @@ def normalize_movement(movement):
     elif movement[0:1] == 'd':
         m = 'd'
     elif movement[-1] == 'h':
-        m = movement[0,1]
+        m = movement[0]
     else:
         if "north" in movement:
             m += "n"
