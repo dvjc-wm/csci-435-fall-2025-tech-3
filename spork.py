@@ -21,20 +21,44 @@ def wipe_terminal():
 
 
 def describe_current_location():
-    current_location_details = mm.get_flag_value("location")
+    room = mm.get_flag_value("location")
+    inventory = mm.get_flag_value("items")
 
     print("")
-    print( desc.get_location_detail(current_location_details, "title") )
+    print( desc.get_location_detail(room, "title") )
 
     print("")
-    print( desc.get_location_detail(current_location_details, "description") )
+    print( desc.get_location_detail(room, "description") )
 
-    current_held_inventory = mm.get_flag_value("items")
-    all_location_items = desc.get_location_detail(current_location_details, "item_keys")
+    print("")
+    print( "recommended moves:   ", lm.available_movements(room))
+    recommend_actions = []
+    if room == "0" and "leaflet" not in inventory:
+        recommend_actions.append("take")
+    if room == "5" and "leaves" not in inventory:
+        recommend_actions.append("take")
+    if room == "7" and "egg" not in inventory:
+        recommend_actions.append("take")
+    if room == "8" and "bottle" not in inventory:
+        recommend_actions.append("take")
+    if room == "6":
+        wind_state = mm.get_flag_value("window")
+        if wind_state == "close":
+            recommend_actions.append("open")
+        elif wind_state == "open":
+            recommend_actions.append("close")
+    if room == "9":
+        recommend_actions.append("place")
+    if "leaflet" in inventory:
+        recommend_actions.append("read")
 
-    if all_location_items not in current_held_inventory:
-        print( desc.get_location_detail(current_location_details, "items") )
+    print( "recommended actions: ", recommend_actions)
 
+    all_location_items = desc.get_location_detail(room, "item_keys")
+
+    if all_location_items not in inventory:
+        print("")
+        print( desc.get_location_detail(room, "items") )
 
 def fetch_valid_command():
     available_commands = ['n', 's', 'e', 'w', 'ne', 'se', 'nw', 'sw', 'u', 'd'
@@ -45,7 +69,9 @@ def fetch_valid_command():
                         , 'l', 'look', 'open', 'close'
                         , 'read'
                         , 'place'
-                        , 'restart', 'cls']
+                        , 'restart', 'cls'
+                        , 'help'
+                        ]
     cmd = input('>')
     if cmd[0:4] == "take":
         return cmd
@@ -66,8 +92,16 @@ valid_command = fetch_valid_command()
 continue_loop = valid_command != "exit" and valid_command != "x"
 
 while continue_loop:
+    if valid_command == "help":
+        print("Welcome to the Spork help")
+        print("type 'look' to be given a refresher of your location")
+        print("  contained therein are directions you can head (north/south/etc)")
+        print("  there will also be some available verbs you may want to consider")
+        print("the place you start has a mailbox with a very useful leaflet")
+        print("  you may want to take that with you")
+        print("")
 
-    if valid_command == "cls":
+    elif valid_command == "cls":
         wipe_terminal()
         describe_current_location()
 
@@ -81,7 +115,9 @@ while continue_loop:
 
     elif valid_command == "read":
         current_inventory = mm.get_flag_value("items")
-        if "leaflet" in current_inventory:
+        if "leaflet" not in current_inventory:
+            print("You need the leaflet (from the mailbox, at the beginning).")
+        else:
             print("\nDirections:")
             print("1. Get to the Forest Path; from mailbox: S -> S -> E")
             print("2. Get the egg (climb the tree, take the egg)")

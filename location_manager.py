@@ -179,6 +179,38 @@ def normalize_movement(movement):
             m = movement
     return m
 
+def available_movements(room):
+
+    full_map = get_full_map()
+    moves = full_map[room]["moves"]
+
+    available_moves = []
+    for key, value in moves.items():
+        if value.isnumeric():
+            if key == "n":
+                available_moves.append("north")
+            elif key == "ne":
+                available_moves.append("northeast")
+            elif key == "s":
+                available_moves.append("south")
+            elif key == "se":
+                available_moves.append("southeast")
+            elif key == "e":
+                available_moves.append("east")
+            elif key == "w":
+                available_moves.append("west")
+            elif key == "nw":
+                available_moves.append("northwest")
+            elif key == "ne":
+                available_moves.append("northeast")
+            elif key == "u":
+                available_moves.append("up")
+            elif key == "d":
+                available_moves.append("down")
+
+    return available_moves
+
+
 def handle_movement(room, movement):
 
     default_moves = {
@@ -209,7 +241,7 @@ def handle_movement(room, movement):
     # look for single exception
     current_window = mm.get_flag_value('window')
 
-    if room == "6" and current_window == "open":
+    if room == "6" and current_window == "open" and movement == "w":
         next_room = "8"
 
     if next_room.isnumeric():
