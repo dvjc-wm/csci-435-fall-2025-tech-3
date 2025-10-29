@@ -30,7 +30,7 @@ def describe_current_location():
     print( desc.get_location_detail(room, "description") )
 
     print("")
-    general_help = ['look', 'inventory', 'verbose', 'brief', 'help', 'restart']
+    general_help = ['look', 'inventory', 'cls', 'help', 'restart']
     print( "General help commands:", general_help)
     print( "recommended moves:    ", lm.available_movements(room))
     recommend_actions = []
