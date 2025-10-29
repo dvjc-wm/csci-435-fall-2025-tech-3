@@ -5,7 +5,7 @@ import location_manager as lm
 
 
 def reset_model():
-    mm.update_model('verbosity', "0")
+    mm.update_model('verbosity', "1")
     mm.update_model('location', "0")
     mm.update_model('items', [])
     mm.update_model('window', "close")
@@ -14,7 +14,6 @@ def show_intro():
     wipe_terminal()
     print('SPORK I: The Trivial Above-ground Empire')
     describe_current_location()
-    print('')
 
 def wipe_terminal():
     os.system('cls')
@@ -31,7 +30,9 @@ def describe_current_location():
     print( desc.get_location_detail(room, "description") )
 
     print("")
-    print( "recommended moves:   ", lm.available_movements(room))
+    general_help = ['look', 'inventory', 'verbose', 'brief', 'help', 'restart']
+    print( "General help commands:", general_help)
+    print( "recommended moves:    ", lm.available_movements(room))
     recommend_actions = []
     if room == "0" and "leaflet" not in inventory:
         recommend_actions.append("take")
@@ -52,13 +53,15 @@ def describe_current_location():
     if "leaflet" in inventory:
         recommend_actions.append("read")
 
-    print( "recommended actions: ", recommend_actions)
+    print( "recommended actions:  ", recommend_actions)
 
     all_location_items = desc.get_location_detail(room, "item_keys")
 
     if all_location_items not in inventory:
         print("")
         print( desc.get_location_detail(room, "items") )
+
+    print('')
 
 def fetch_valid_command():
     available_commands = ['n', 's', 'e', 'w', 'ne', 'se', 'nw', 'sw', 'u', 'd'
@@ -213,7 +216,6 @@ while continue_loop:
                 print("\nYou gently place the egg in the trophy case.")
                 print("You have won the game!")
                 continue_loop = False
-
 
     if continue_loop:
         valid_command = fetch_valid_command()
