@@ -87,6 +87,8 @@ how should i go about adding unit and integration test coverage?
 
 - Note that all of Junie's force-recommended changes are no longer present
 
+- Note also that Junie created a "tests" folder which was not rolled-back
+
 ### Hide the AI Assistant (should be the icon that looks like a whirlpool with a tiny cartoon quote bubble)
 
 ### Add the icon back to the PyCharm
