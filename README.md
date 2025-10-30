@@ -47,7 +47,7 @@ https://account.jetbrains.com/login for regular sign-up
 
 ### Open PyCharm and open the above repository in PyCharm
 
-### In PyCharm, start enabling AI by clicking the Whirlpool (at the top)
+### In PyCharm, start enabling AI by clicking the Whirlpool (at the top)    
 
 ### Enable Junie Pro
 
@@ -63,7 +63,7 @@ Note: to open Search, click on the Magnifying glass
 ### Use this query in AI Assistant to fix the clear-terminal command in the sporky.py file (in wipe_terminal()) so that it works on Windows and a Mac
 
 ```
-how do i clear the terminal in an environment agnostic way?
+how do i clear the terminal in an environment-agnostic way?
 ```
 
 ### Open Junia and note that there is no visible evidence which model is being used
