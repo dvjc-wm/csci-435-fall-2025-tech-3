@@ -25,25 +25,25 @@ Additionally, in case you are a developer polyglot, [this page](https://www.jetb
 
 ## Tasking
 
-### install or have already installed Python (I used Python 3.13)
+### install or have already installed [Python](https://www.python.org/downloads/) (I used Python 3.13)
 
 I think everyone should already have this
 
-### install Django (not essential for most of the steps but good to do early and relevant to steps 08-10)
+### install [Django](https://www.djangoproject.com/download/) (not essential for most of the steps but good to do early and relevant to steps 08-10)
 
 I think everyone should already have this
 
-### download the repository
+### download [the repository](https://github.com/dvjc-wm/csci-435-fall-2025-tech-3)
 
-https://github.com/dvjc-wm/csci-435-fall-2025-tech-3
+### install [PyCharm](https://www.jetbrains.com/pycharm/)
 
-### install PyCharm
-
-https://www.jetbrains.com/pycharm/
+Alternatively, install the [JetBrains Toolbox App](https://www.jetbrains.com/toolbox-app/)
 
 ### create a JetBrains account
 
-https://account.jetbrains.com/login
+https://www.jetbrains.com/academy/student-pack/ for student subscription
+
+https://account.jetbrains.com/login for regular sign-up
 
 ### Open PyCharm and open the above repository in PyCharm
 
@@ -62,13 +62,17 @@ Note: to open Search, click on the Magnifying glass
 
 ### use this query in AI Assistant to fix the clear-terminal command in the sporky.py file (in wipe_terminal()) so that it works on Windows and a Mac
 
-    how do i clear the terminal in an environment agnostic way?
+```
+how do i clear the terminal in an environment agnostic way?
+```
 
 ### Open Junia and note that there is no visible evidence which model is being used
 
 ### use this query in both AI Assistant and Junie:
 
-    how should i go about adding unit and integration test coverage?
+```
+how should i go about adding unit and integration test coverage?
+```
 
  - note what the AI Assistant does - and that no file changes were made - but that all recommendations are django-centric
  - note what Junie does - and how it actually implements it - and how it is NOT django-centric
