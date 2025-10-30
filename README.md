@@ -25,17 +25,17 @@ Additionally, in case you are a developer polyglot, [this page](https://www.jetb
 
 ## Tasking
 
-### install or have already installed [Python](https://www.python.org/downloads/) (I used Python 3.13)
+### Install or have already installed [Python](https://www.python.org/downloads/) (I used Python 3.13)
 
 I think everyone should already have this
 
-### install [Django](https://www.djangoproject.com/download/) (not essential for most of the steps but good to do early and relevant to steps 08-10)
+### Install [Django](https://www.djangoproject.com/download/) (not essential for most of the steps but good to do early and relevant to steps 08-10)
 
 I think everyone should already have this
 
-### download [the repository](https://github.com/dvjc-wm/csci-435-fall-2025-tech-3)
+### Download [the repository](https://github.com/dvjc-wm/csci-435-fall-2025-tech-3)
 
-### install [PyCharm](https://www.jetbrains.com/pycharm/)
+### Install [PyCharm](https://www.jetbrains.com/pycharm/)
 
 Alternatively, install the [JetBrains Toolbox App](https://www.jetbrains.com/toolbox-app/)
 
@@ -60,7 +60,7 @@ Note: to open Search, click on the Magnifying glass
 
 ### Open the AI Assistant - and note you can see which model is being used to answer questions
 
-### use this query in AI Assistant to fix the clear-terminal command in the sporky.py file (in wipe_terminal()) so that it works on Windows and a Mac
+### Use this query in AI Assistant to fix the clear-terminal command in the sporky.py file (in wipe_terminal()) so that it works on Windows and a Mac
 
 ```
 how do i clear the terminal in an environment agnostic way?
@@ -68,7 +68,7 @@ how do i clear the terminal in an environment agnostic way?
 
 ### Open Junia and note that there is no visible evidence which model is being used
 
-### use this query in both AI Assistant and Junie:
+### Use this query in both AI Assistant and Junie:
 
 ```
 how should i go about adding unit and integration test coverage?
@@ -77,7 +77,7 @@ how should i go about adding unit and integration test coverage?
  - note what the AI Assistant does - and that no file changes were made - but that all recommendations are django-centric
  - note what Junie does - and how it actually implements it - and how it is NOT django-centric
 
-### close PyCharm and then open it again
+### Close PyCharm and then open it again
 
 - Note that the AI Assistant recommendation is erased/no longer present
 
