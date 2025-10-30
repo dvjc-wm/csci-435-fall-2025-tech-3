@@ -47,7 +47,7 @@ https://account.jetbrains.com/login for regular sign-up
 
 ### Open PyCharm and open the above repository in PyCharm
 
-### In PyCharm, enable AI by clicking the (Whirlpool at the top)
+### In PyCharm, start enabling AI by clicking the Whirlpool (at the top)
 
 ### Enable Junie Pro
 
